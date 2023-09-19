@@ -50,6 +50,7 @@ spec:
             - /.secrets/zitadel-secret-config-yaml/{{ .Values.zitadel.configSecretKey }}
             {{- end }}
             - --masterkeyFromEnv
+            - --tlsMode external
           env:
             - name: POD_IP
               valueFrom:
